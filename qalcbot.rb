@@ -38,7 +38,7 @@ bot = Cinch::Bot.new do
 
   on :message, /^qalc[:,]? (.+)$/ do |m|
     if m.params[1].include?(' ')
-      reply = qalc(m.params[1].split(' ')[1])
+      reply = qalc(m.params[1].split(' ')[1..-1].join(' '))
     else
       reply = "usage:  qcalc: [stuff]"
     end
