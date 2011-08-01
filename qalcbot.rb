@@ -9,7 +9,7 @@ Configru.load do
   just 'config.yml'
   defaults do
     nick     'qalc'
-    channels ['#bots']#, '#programming']
+    channels ['#bots', '#offtopic', '#programming']
     server do
       address 'irc.ninthbit.net'
       port    6667
