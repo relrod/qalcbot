@@ -37,12 +37,13 @@ bot = Cinch::Bot.new do
   end
 
   on :message, /^qalc[:,]? (.+)$/ do |m|
-    if m.params[1].include?(' ')
-      reply = qalc(m.params[1].split(' ')[1..-1].join(' '))
+    parts = m.params[1].split(' ')
+    if parts.length > 1
+      reply = qalc(parts[1..-1].join(' '))
     else
       reply = "usage:  qcalc: [stuff]"
     end
-    m.reply "#{m.user.nick}: #{reply}"
+    m.reply(reply, true)
   end
 end
 
