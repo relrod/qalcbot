@@ -11,7 +11,7 @@ Configru.load do
     nick     'qalc'
     channels ['#bots', '#offtopic', '#programming']
     server do
-      address 'irc.tenthbit.net'
+      address 'onyx.tenthbit.net'
       port    6667
     end
   end
